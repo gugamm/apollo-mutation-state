@@ -1,5 +1,5 @@
 # Apollo mutation state
-Apollo mutation state is a hoc for track an apollo mutation state. 
+Apollo mutation state is a hoc to track an apollo mutation state. 
 
 ### Installation
 With npm

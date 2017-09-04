@@ -1,7 +1,7 @@
 {
   "name": "apollo-mutation-state",
-  "version": "0.0.3",
-  "description": "A hoc for track an apollo mutation state",
+  "version": "0.0.4",
+  "description": "A hoc to track an apollo mutation state",
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
