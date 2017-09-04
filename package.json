@@ -1,0 +1,28 @@
+{
+  "name": "apollo-mutation-state",
+  "version": "0.0.1",
+  "description": "A hoc for track an apollo mutation state",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublish": "build"
+  },
+  "keywords": [
+    "apollo",
+    "mutation",
+    "state"
+  ],
+  "author": "gugamm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gugamm/apollo-mutation-state"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
