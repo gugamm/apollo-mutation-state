@@ -2,10 +2,10 @@
   "name": "apollo-mutation-state",
   "version": "0.0.1",
   "description": "A hoc for track an apollo mutation state",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
-    "prepublish": "build"
+    "prepublish": "npm run build"
   },
   "keywords": [
     "apollo",
