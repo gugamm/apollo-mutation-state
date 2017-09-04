@@ -1,6 +1,6 @@
 {
   "name": "apollo-mutation-state",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A hoc for track an apollo mutation state",
   "main": "./lib/index.js",
   "scripts": {
@@ -24,5 +24,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=15.6.1"
   }
 }

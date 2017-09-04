@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 /**
  * @typedef MutationStateOptions
  * @type {object}
@@ -91,4 +92,4 @@ const withMutationState = ({ mutationName = 'mutate', propName = 'mutation', set
   }
 }
 
-export default withMutationState;
+exports.default = withMutationState;
