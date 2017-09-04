@@ -19,6 +19,7 @@ withMutationState(Options)(TargetComponent)
 
 ### Options
 All options that can be passed to the hoc
+
 | Option | Default value | Type | Description |
 | ------ | ------ | ------ | ------ | 
 | mutationName | mutate | string | The name of the method "mutate" from the graphql hoc |
@@ -26,7 +27,7 @@ All options that can be passed to the hoc
 | setStateAfterSuccess | true | boolean | Tells the hoc to set state success after a request is complete. Should be false if component is unmouted after a request is complete. (Redirecting the user to another page for example) |
 | propagateError | false | boolean | Tells the hoc to propagate the error of the "mutate" method. If false, the hoc will not propagate the error from the mutate and you will not be able to ".catch" that error |
 | wrapper | false | boolean | Should be true if the hoc is the parent of a graphql hoc component. False if it is the child. |
-| wrapName | wrapMutate |string |  The name of the method to wrap the mutation call. This method is only passed if wrapper is true |
+| wrapName | wrapMutate | string |  The name of the method to wrap the mutation call. This method is only passed if wrapper is true |
 
 ### MutateState object api
 | Prop  | Type | Description |
