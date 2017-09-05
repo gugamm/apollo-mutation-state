@@ -24,7 +24,6 @@ All options that can be passed to the hoc
 | ------ | ------ | ------ | ------ | 
 | mutationName | mutate | string | The name of the method "mutate" from the graphql hoc |
 | propName | mutation | string | The name of the prop that will be used to pass the mutation state object |
-| setStateAfterSuccess | true | boolean | Tells the hoc to set state success after a request is complete. Should be false if component is unmouted after a request is complete. (Redirecting the user to another page for example) |
 | propagateError | false | boolean | Tells the hoc to propagate the error of the "mutate" method. If false, the hoc will not propagate the error from the mutate and you will not be able to ".catch" that error |
 | wrapper | false | boolean | Should be true if the hoc is the parent of a graphql hoc component. False if it is the child. |
 | wrapName | wrapMutate | string |  The name of the method to wrap the mutation call. This method is only passed if wrapper is true |
@@ -144,7 +143,6 @@ export default enhance(TargetComponent);
 ### Caveats
 
 * You should use this hoc as a wrapper if you want to implement custom logic after the mutation completes
-* You should set "setStateAfterSuccess" to false if after a mutation you make something **like a redirect** that causes the component to unmount (this is important since withMutationState has a internal state and using setState at an unmouted component causes react to display a warning)
 * You should use one withMutationState for each mutation
 * This hoc only works if using a mutation with one call at a time. If calling the same mutation multiple times in parallel, the hoc can't keep track of all mutation instances.
 
