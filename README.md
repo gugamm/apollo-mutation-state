@@ -34,7 +34,7 @@ All options that can be passed to the hoc
 | loading | boolean | Indicates if the mutation is loading |
 | error | boolean | Indicates if there was an error with the mutation |
 | success | boolean | Indicates if the mutation was completed |
-| clearState() | Function | A function that can be called to clear the MutationState {loading: false, error: false, success: false} |
+| clearState() | Function | A function that can be called to clear the MutationState {loading: false, error: null, success: false} |
 
 ### Example (Using the MutateState)
 ```js

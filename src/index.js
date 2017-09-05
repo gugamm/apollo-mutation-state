@@ -73,7 +73,11 @@ export default ({ mutationName = 'mutate', propName = 'mutation', propagateError
     }
 
     clearState = () => {
-      this.setMutationState({});
+      this.setMutationState({
+        loading: false,
+        error: null,
+        success: false,
+      });
     }
 
     render() {
