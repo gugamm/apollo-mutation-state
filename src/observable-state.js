@@ -14,7 +14,7 @@ const createObservableState = (initialState) => {
     next(nextState) {
       state = {
         ...state,
-        nextState,
+        ...nextState,
       };
       listeners.forEach(
         listener => listener(state),

@@ -17,7 +17,7 @@ import createObservableState from './observable-state';
  * If using two graphql hocs with two mutations, then there should be 2 hocs for tracking their state
  * @param {MutationStateOptions} options - Mutation state options 
  */
-export default ({ mutationName = 'mutate', propName = 'mutation', propagateError = false, wrapper = false, wrapName = 'wrapMutate' } = {}) => WrappedComponent => {
+export default ({ mutationName = 'mutate', propName = 'mutation', propagateError = false, wrapper = false, wrapName = 'wrapMutate' } = {}) => (WrappedComponent) => {
   class MutationState extends PureComponent {
     constructor(props) {
       super(props);
@@ -48,14 +48,18 @@ export default ({ mutationName = 'mutate', propName = 'mutation', propagateError
     wrapMutate = (mutatePromise) => {
       this.setMutationState({
         loading: true,
+        error: null,
+        success: false,
       });
       return mutatePromise.then((response) => {
         this.setMutationState({
           success: true,
+          loading: false,
         });
         return response;
       }).catch((error) => {
         this.setMutationState({
+          loading: false,
           error,
         });
         if (propagateError) {
@@ -82,7 +86,7 @@ export default ({ mutationName = 'mutate', propName = 'mutation', propagateError
 
     render() {
       const props = {
-        ...this.props
+        ...this.props,
       };
       if (wrapper) {
         props[wrapName] = this.wrapMutate;
@@ -100,4 +104,4 @@ export default ({ mutationName = 'mutate', propName = 'mutation', propagateError
   }
   hoistNonReactStatic(MutationState, WrappedComponent);
   return MutationState;
-}
+};
